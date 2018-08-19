@@ -51,7 +51,7 @@ Given a String ACGTACTAT. Its 3-mer Composition is (ACG, CGT, GTA, TAC, ACT, CTA
 
 ### 03. Using De-Bruijn graph from Error-Prone Reads:
 #### steps:
-1 .Read the reads of the genome from the input.
+1. Read the reads of the genome from the input.
 
 2. Create De-Bruijn Graph from the k-mers - which are formed by spitting the reads into all substrings of length k.
 
