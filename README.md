@@ -16,3 +16,21 @@ A collection of Strings called reads of the original genome. Each read is a sub-
 
 ### Output:
 A string S of minimum length that cantains all the strings(reads) given in the input as its sub-strings.
+
+
+## Algorithms:
+### 01. Overlap Graph Algorithm:
+#### steps:
+1. Construct an overlap graph. Two reads are joined by a directed edge of weight equal to the length of the maximum overlap of these two strings.
+
+2. Then construct a Hamiltonian path in this graph in a greedy fashion.
+
+3. Greedy Strategy : For each read select an outgoing edge of maximum weight. Why? Because the more the overlap between the reads shorter shorter will be the length of the combined string made of these reads.
+
+4. Then read a string spelled by this path. i.e combine to form a super string.
+
+5. Sometimes choosing the wrong first vertex may result in longer superstring. So you should generate random index probably 2-3 times and find minimum length super string.
+
+6. Now in the last step since genome can be circular also so remove the overlap length between last and first read.
+
+Note: This greedy algorithm does not work with every genome as it might not give optimal solution every time.
