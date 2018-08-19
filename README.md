@@ -11,10 +11,10 @@ The phi X 174 (or ΦX174) bacteriophage is a single-stranded DNA (ssDNA) virus a
 <img width="259" alt="default" src="https://user-images.githubusercontent.com/33269462/44305606-65c2b780-a349-11e8-9ee5-ccb3e108aa3c.png">
 
 ## Problem Description:
-### Input: 
+#### Input: 
 A collection of Strings called reads of the original genome. Each read is a sub-string of the original genome(Genome can be circular also).
 
-### Output:
+#### Output:
 A string S of minimum length that cantains all the strings(reads) given in the input as its sub-strings.
 
 
@@ -33,4 +33,18 @@ A string S of minimum length that cantains all the strings(reads) given in the i
 
 6. Now in the last step since genome can be circular also so remove the overlap length between last and first read.
 
-Note: This greedy algorithm does not work with every genome as it might not give optimal solution every time.
+#### Note: 
+This greedy algorithm does not work with every genome as it might not give optimal solution every time.
+
+### 02. K-Mer Composition Algorithm:
+#### What is K-mer Composition?
+Given a String ACGTACTAT. Its 3-mer Composition is (ACG, CGT, GTA, TAC, ACT, CTA, TAT).
+
+#### steps:
+1. Read the k-mer composition of the graph.
+
+2. Create the De-Bruijn graph from the k-mer composition.
+
+3. Find an eulerian cycle in the graph.
+
+4. Construct the genome from the found cycle.
