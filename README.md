@@ -48,3 +48,17 @@ Given a String ACGTACTAT. Its 3-mer Composition is (ACG, CGT, GTA, TAC, ACT, CTA
 3. Find an eulerian cycle in the graph.
 
 4. Construct the genome from the found cycle.
+
+### 03. Using De-Bruijn graph from Error-Prone Reads:
+#### steps:
+1 .Read the reads of the genome from the input.
+
+2. Create De-Bruijn Graph from the k-mers - which are formed by spitting the reads into all substrings of length k.
+
+3. Remove the tips from the graph.
+
+4. Remove the bubbles from the graph.(Do not remove bubbles of long lengths. Only remove bubbles of length less than k, which is the size of a k-mer. May also have to again remove tips after removing the bubbles.)
+
+5. Find an Eulerian cycle in the graph.
+
+6. Form the genome from the eulerian cycle found in the graph.
